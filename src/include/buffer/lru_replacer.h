@@ -49,7 +49,6 @@ class LRUReplacer : public Replacer {
  private:
   // TODO(student): implement me!
   size_t num_pages_;
-  std::unordered_map<frame_id_t, size_t> pin_count_;
   std::mutex mutex_lock_;
   std::list<frame_id_t> pin_lists_;
   std::unordered_map<frame_id_t, std::list<frame_id_t>::iterator> pin_map_table_;
